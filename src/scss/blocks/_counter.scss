@@ -1,0 +1,59 @@
+.counter-block {
+	transform: translateY(-83px);
+	z-index: 2;
+	position: relative;
+	&__items {
+		padding: 43px 23px;
+		border-radius: 12px;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+		display: flex;
+		background-color: $color-white;
+		width: 100%;
+		flex-direction: column;
+		@media screen and (min-width: 768px){
+			flex-direction: row;
+		}
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		flex: 1;
+		padding: 20px 0;
+		@media screen and (min-width: 768px) {
+			padding: 10px;
+		}
+		@media screen and (min-width: 993px) {
+			padding: 0;
+		}
+		&:not(:last-child) {
+			border-bottom: 1px solid $color-gray;
+			@media screen and (min-width: 768px){
+				border-bottom: none;
+				border-right: 1px solid $color-gray;
+			}
+		}
+	}
+	&__number {
+		font-size: 30px;
+		line-height: 39px;
+		font-weight: 800;
+		color: $color-text;
+		@media screen and (min-width: 1199px){
+			font-size: 40px;
+			line-height: 52px;
+		}
+	}
+	&__text {
+		font-size: 13px;
+		line-height: 1em;
+		text-align: center;
+		@media screen and (min-width: 768px) {
+			font-size: 19px;
+		}
+		@media screen and (min-width: 993px) {
+			line-height: 2.5em;
+		}
+	}
+}

@@ -1,0 +1,146 @@
+body {
+	font-family: $font-opensans;
+	font-weight: normal;
+	font-size: $font-size-base;
+	line-height: 24px;
+	color: $color-text;
+	background-color: $color-bg;
+}
+ul{
+	&[class] {
+		list-style-type: none;
+	}
+}
+a{
+	&[class] {
+		text-decoration: none;
+	}
+}
+.btn-orange {
+	background-color: $color-orange;
+	color: $color-white;
+	&:hover, &:focus {
+		background-color: $color-blue;
+		color: $color-white;
+	}
+	@include transition;
+}
+.btn-blue {
+	background-color: $color-blue;
+	color: $color-white;
+	&:hover, &:focus {
+		background-color: $color-orange;
+		color: $color-white;
+	}
+	@include transition;
+}
+.bordered-blue-btn {
+	padding: 0;
+	border: 1px solid $color-blue;
+	border-radius: 8px;
+	align-items: center;
+	background-color: transparent;
+	color: $color-blue;
+	display: inline-flex;
+	justify-content: center;
+	@include transition;
+	font-weight: 600;
+	&:hover, &:focus {
+		border-color: $color-orange;
+		color: $color-orange;
+	}
+	a {
+		border: 0!important;
+		font-weight: 600;
+	}
+}
+.mobile-hidden-inline {
+	display: none;
+	@media screen and (min-width: 992px){
+		display: inline-flex;
+	}
+}
+.desktop-hidden-inline {
+	display: inline-flex;
+	@media screen and (min-width: 992px){
+		display: none;
+	}
+}
+.h1 {
+	font-weight: 800;
+	font-size: 48px;
+	line-height: 62px;
+}
+.section-header {
+	font-weight: bold;
+	font-size: 26px;
+	color: $color-text;
+}
+.social-list {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	gap: 10px;
+	&__item {
+		width: 26px;
+		height: 26px;
+		border-radius: 50%;
+	}
+	&__link {
+		display: flex;
+	}
+	&__img {
+
+	}
+}
+.payment-methods {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	gap: 10px;
+	&__item {
+		width: 42px;
+	}
+	&__img {
+
+	}
+}
+.owl-item {
+	.item {
+		background-color: $color-white;
+		border-radius: 0 0 12px 12px;
+		@include transition;
+		.carousel-image {
+			border-radius: 12px 12px 0 0;
+		}
+		h3 {
+			font-size: 16px;
+			font-weight: 700;
+			padding: 20px;
+		}
+		&:hover {
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+		}
+	}
+
+}
+.owl-theme.nav-centered .owl-nav button.owl-prev {
+	left: -3ch!important;
+	font-size: 30px;
+}
+.owl-theme.nav-centered .owl-nav button.owl-next {
+	right: -3ch!important;
+	font-size: 30px;
+}
+.owl-theme .owl-nav [class*=owl-]:hover {
+	background: transparent!important;
+	color: $color-text!important;
+}
+.owl-wrapper {
+	margin: 32px 0;
+}
+@media  screen and (max-width: 1199px){
+	.owl-theme.nav-centered .owl-nav {
+		display: none!important;
+	}
+}

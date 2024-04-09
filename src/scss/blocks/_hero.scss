@@ -1,0 +1,42 @@
+.hero-block {
+	background-position: 38% 50%;
+	min-height: 586px;
+	background-repeat: no-repeat;
+	background-size: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@media screen and (min-width: 1024px){
+		background-position: 43% 50%;
+	}
+	@media screen and (min-width: 1024px){
+		background-position: center center;
+	}
+	&__title {
+		margin-bottom: 20px;
+		color: $color-white;
+		text-align: center;
+		@media screen and (min-width: 768px){
+			text-align: left;
+		}
+	}
+	&__text {
+		margin-bottom: 15px;
+		color: $color-white;
+		font-size: 17px;
+		text-align: center;
+		@media screen and (min-width: 768px){
+			text-align: left;
+		}
+	}
+	&__btn {
+		padding: 23px 66px;
+		font-size: 18px;
+		line-height: 20px;
+		width: 100%;
+		text-align: center;
+		@media screen and (min-width: 768px){
+			width: auto;
+		}
+	}
+}

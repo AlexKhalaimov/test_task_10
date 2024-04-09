@@ -1,0 +1,92 @@
+.footer {
+	padding-top: 64px;
+	background-color: $color-text;
+	h4, h3, p, a, span {
+		color: $color-white;
+	}
+	h4 {
+		font-size: 18px;
+		line-height: 31px;
+		margin-bottom: 12px;
+	}
+	a {
+		text-decoration: none;
+		font-size: 16px;
+		line-height: 27px;
+		@include transition;
+		&:hover {
+			color: $color-orange;
+		}
+	}
+	&__top-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		@media screen and (min-width: 768px) {
+			grid-template-columns: repeat(3, auto);
+			justify-content: space-between;
+		}
+	}
+	&__top-item {
+		display: inline-flex;
+		flex-direction: column;
+		width: fit-content;
+		&--mid {
+			grid-column: 1/2;
+			grid-row: 2/3;
+			@media screen and (min-width: 768px) {
+				grid-column: 2/3;
+				grid-row: 1/2;
+			}
+		}
+	}
+	&__bottom {
+		border-top: 1px solid #0B0D17;
+		display: flex;
+		align-items: start;
+		width: 100%;
+		padding: 28px 0 40px;
+	}
+	&__bottom-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		row-gap: 20px;
+		column-gap: 32px;
+		@media screen and (min-width: 993px){
+			justify-content: space-between;
+			flex-wrap: nowrap;
+		}
+		.menu {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			width: 100%;
+			column-gap: 30px;
+			@media screen and (min-width: 993px){
+				justify-content: space-between;
+				flex-wrap: nowrap;
+				flex-direction: row;
+			}
+		}
+		.widget_nav_menu {
+			width: 100%;
+			@media screen and (min-width: 993px){
+				width: auto;
+			}
+		}
+	}
+	.menu {
+		padding: 0;
+		margin: 0;
+	}
+	.widget_block {
+		.wp-block-image a {
+			border: 1px solid $color-white;
+			border-radius: 5px;
+			display: inline-flex;
+			img {
+				width: 132px;
+			}
+		}
+	}
+}

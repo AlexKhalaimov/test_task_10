@@ -1,0 +1,4 @@
+site login: prometheus_admin
+site pass: prometheus_admin
+db user: prometheus
+db pass: prometheus

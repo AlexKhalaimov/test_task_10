@@ -1,0 +1,17 @@
+$font-opensans:'Open Sans', sans-serif;
+$font-montserrat:'Montserrat', sans-serif;
+$color-text: #18191F;
+$color-orange:#F58932;
+$color-beige:#F0F0F0;
+$color-blue:#244B83;
+$color-gray:#CCCDCD;
+$color-white: #fff;
+$color-bg: #F9F9F9;
+$font-size-base: 14px;
+@mixin transition(){
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-ms-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
+}
